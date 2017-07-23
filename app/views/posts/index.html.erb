@@ -1,11 +1,23 @@
 <div class="container panel-group">
   <% @posts.each do |post|%>
     <div class="col-sm-4">
-      <div class="panel panel-primary" href="<%= %>" data-toggle="modal" data-target="#showPicDetailsModal" remote="true">
+      <div class="panel panel-primary" value="<%= post.id %>" data-toggle="modal" data-target="#showPicDetailsModal" remote="true">
         <div class="panel-heading"><%= post.title.titleize%></div>
         <div class="panel-body"><img src="<%=post.pic_url.url%>" class="img-responsive"></div>
       </div>
     </div>
   <% end if @posts.present? %>
 </div>
-<div class="modal" id="showPicDetailsModal"></div>
+<div class="modal fade" id="showPicDetailsModal" role="dialog"></div>
+
+<script type="text/javascript">
+  $(document).on('click', '.panel', function(){
+    debugger;
+    var id = $(this).attr('value');
+    $.ajax({
+      type: "GET",
+      url: "/posts/"+id,
+      dataType: "script"
+    });
+  });
+</script>
