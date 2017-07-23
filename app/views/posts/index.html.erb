@@ -12,7 +12,6 @@
 
 <script type="text/javascript">
   $(document).on('click', '.panel', function(){
-    debugger;
     var id = $(this).attr('value');
     $.ajax({
       type: "GET",
@@ -20,4 +19,14 @@
       dataType: "script"
     });
   });
+  // $(document).on('click', '#submitComment', function(){
+  //   var body = $('.comments').val();
+  //   if (body!= ""){
+  //     $.ajax({
+  //       type: "POST",
+  //       url: "/comments?body="+body,
+  //       dataType: "script"
+  //     });
+  //   }
+  // });
 </script>

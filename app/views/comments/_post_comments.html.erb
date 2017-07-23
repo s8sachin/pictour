@@ -1,0 +1,5 @@
+<% @comments.each do |comment| %>
+<div class="row panel">
+	<div class="col-sm-2"><a href=""><%= comment.user.username %>: </a></div><span><%= comment.body %></span>
+</div>
+<% end if @comments.present? %>
