@@ -14,6 +14,8 @@ gem 'pg'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'pry'
 gem "font-awesome-rails"
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

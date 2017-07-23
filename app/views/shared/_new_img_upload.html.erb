@@ -1,0 +1,46 @@
+<div id="uploadImageModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">New Pictour</h4>
+      </div>
+      <%= form_for :post, url: posts_path, method: :post, :remote => true, :authenticity_token => true, :id => "create_post" do |f| %>
+        <div class="modal-body">
+          <div class="row form-group">
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                  <b>Title:</b>
+                </div>
+                <div class="col-sm-9">
+                  <%= f.text_field :title, :class => "form-control", :id => "title", :placeholder => "Title", :required => true %>
+                </div>
+              </div><br>
+              <div class="row">
+                <div class="col-sm-3">
+                  <b>Image:</b>
+                </div>
+                <div class="col-sm-9">
+                  <%= f.file_field :pic_url, :class => "", :id => "pic_url", :required => true %>
+                </div>
+              </div><br>
+              <div class="row">
+                <div class="col-sm-3">
+                  <b>Descriptio:</b>
+                </div>
+                <div class="col-sm-9">
+                  <%= f.text_area :description, :class => "form-control", :id => "description", :placeholder => "Description", :required => true%>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <%= f.submit "Submit", :class=>"btn btn-primary", :id => "submit_recharge" %>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
