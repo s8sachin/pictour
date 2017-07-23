@@ -9,10 +9,14 @@ class UsersController < ApplicationController
   def create
     @user=User.new(user_params)
     if @user.save
-      redirect_to root_path, :notice => "User Created successfully !"
+      redirect_to root_path, flash[:success] => "User Created successfully !"
       else
         render 'new', :notice => "Something went wrong."
       end
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   private

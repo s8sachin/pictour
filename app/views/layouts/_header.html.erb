@@ -11,7 +11,8 @@
     </div>
       <% if current_user %>
       <ul class="nav navbar-nav pull-right">
-        <li></li>
+        <li class="nav_btns"><%= button_to "Profile", user_path(current_user), class: "btn btn-success",:method=> :get, :remote => true, :data => {:toggle => "modal", :target => "#profile"} %>
+        </li>
         <li class="nav_btns"><div class="btn btn-success" data-toggle="modal" data-target="#uploadImageModal">Upload <i class="fa fa-upload" aria-hidden="true"></i></div></li>
         <li> <%= link_to "Log out", log_out_path %></li>
       </ul>
@@ -28,5 +29,7 @@
 <div id="signup" class="modal fade" role="dialog">
 </div>
 <div id="login" class="modal fade" role="dialog">
+</div>
+<div id="profile" class="modal fade" role="dialog">
 </div>
 <%= render :partial => "shared/new_img_upload" %>

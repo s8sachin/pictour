@@ -17,7 +17,6 @@ $(document).on({
 }, '.post');
 
 $(document).on('click', '.delete_post_btn', function(){
-  debugger
   var id = $(this).attr('value');
   $.ajax({
     type: "GET",
