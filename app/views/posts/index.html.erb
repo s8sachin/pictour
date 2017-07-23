@@ -2,7 +2,7 @@
   <% @posts.each do |post|%>
     <div class="col-sm-4 post">
       <div class="panel panel-primary " value="<%= post.id %>">
-        <div class="panel-heading clearfix"><%= post.title.titleize%>
+        <div class="panel-heading clearfix"><%= post.title%>
           <% if post.user == current_user %>
             <div class="pull-right btn btn-danger btn-sm delete_post_btn" data-toggle="modal" data-target="#confirmPostDeleteModal" remote="true" style="display: none" value="<%= post.id %>"><i class="fa fa-trash-o" aria-hidden="true"></i></div>
           <% end %>
