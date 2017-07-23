@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :find_post, only: [:show, :confirm_delete, :destroy]
   def index
     @posts = Post.all
   end
@@ -15,19 +16,20 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @comments = @post.comments
   end
 
   def confirm_delete
-    @post = Post.find(params[:id])
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
     flash[:success] = "Pictour deleted Successfully"
     redirect_to :back
+  end
+
+  def find_post
+    @post = Post.find(params[:id])
   end
 
   private
