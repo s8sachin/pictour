@@ -3,10 +3,6 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def new
-
-  end
-
   def create
     @post = Post.new(post_params)
     if @post.save
@@ -21,6 +17,17 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comments = @post.comments
+  end
+
+  def confirm_delete
+    @post = Post.find(params[:id])
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:success] = "Pictour deleted Successfully"
+    redirect_to :back
   end
 
   private

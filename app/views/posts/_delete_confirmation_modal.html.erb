@@ -1,0 +1,23 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Delete Confirmation</h4>
+    </div>
+    <div class="modal-body">
+      <p>Are you sure to delete this pictour ?</p>
+      <p><b> '<%= @post.title.titleize%>'</b> <img src="<%= @post.pic_url.thumb.url%>"></p>
+      
+    </div>
+    <div class="modal-footer">
+    <div class="row">
+      <div class="col-sm-2 pull-right">
+        <%= button_to "Delete", post_path(@post), class: "btn btn-danger",:method=> :delete, :remote => true %>
+      </div>
+      <div class="col-sm-2 pull-right">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

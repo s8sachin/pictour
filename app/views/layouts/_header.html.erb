@@ -6,17 +6,20 @@
       <%end%>
     </div>
     <div id="navbar">
+    <div>
+      <a href="#"><img src="<%= asset_path('pictour.png') %>" class="img-responsive col-sm-2"></a>
+    </div>
       <% if current_user %>
       <ul class="nav navbar-nav pull-right">
         <li></li>
-        <li><div class="btn btn-success" data-toggle="modal" data-target="#uploadImageModal">Upload <i class="fa fa-upload" aria-hidden="true"></i></div></li>
+        <li class="nav_btns"><div class="btn btn-success" data-toggle="modal" data-target="#uploadImageModal">Upload <i class="fa fa-upload" aria-hidden="true"></i></div></li>
         <li> <%= link_to "Log out", log_out_path %></li>
       </ul>
       <% else %>
       <ul class="nav navbar-nav pull-right">
-        <li style="margin-right:20px; margin-top:7px"><%= button_to "Sign up", sign_up_path, class: "btn btn-success",:method=> :get, :remote => true, :data => {:toggle => "modal", :target => "#signup"} %>
+        <li class="nav_btns"><%= button_to "Sign up", sign_up_path, class: "btn btn-success",:method=> :get, :remote => true, :data => {:toggle => "modal", :target => "#signup"} %>
         </li>
-        <li style="margin-right:20px; margin-top:7px"><%= button_to "log in", log_in_path, class: "btn btn-success",:method=> :get, :remote => true, :data => {:toggle => "modal", :target => "#login"} %></li>
+        <li class="nav_btns"><%= button_to "log in", log_in_path, class: "btn btn-success",:method=> :get, :remote => true, :data => {:toggle => "modal", :target => "#login"} %></li>
       </ul>
       <% end %>
     </div>

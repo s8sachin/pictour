@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   resources :posts
+  get 'confirm_delete', to: 'posts#confirm_delete', as: :confirm_delete
   resources :comments
 end

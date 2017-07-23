@@ -1,17 +1,24 @@
+/*General css*/
 #error_explanation {
-	color: #f00;
-	
-
+  color: #f00;
 }
 
-/*.field_with_errors {
-  @extend .control-group;
-  @extend .error;
- }*/
- 
- .field_with_errors {
- 	@extend .has-error;
- 	.form-control {
- 		color: $state-danger-text;
- 	}
- }
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: #f00;
+  }
+}
+
+.nav_btns{
+  margin-right:20px; 
+  margin-top:7px
+}
+/*General css ends*/
+
+/*posts page*/
+.posts_panel{
+  cursor: pointer;
+}
+
+ /*posts ends*/
