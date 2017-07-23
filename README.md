@@ -10,8 +10,6 @@ This is a simple Instagram like app, You can:
 
 * As both a signed in user and visitor, You can view uploaded images
 
-* Database initialization
-
 * As a signed in user, You can delete an image that I uploaded
 
 * As a signed in user, You can comment on an image
