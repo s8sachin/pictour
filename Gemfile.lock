@@ -57,6 +57,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
@@ -74,8 +76,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.6)
       mime-types (>= 1.16, < 4)
-    materialize-sass (0.100.0)
-      sass (~> 3.3)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -172,10 +172,10 @@ DEPENDENCIES
   bcrypt-ruby
   byebug
   coffee-rails (~> 4.2)
+  font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  materialize-sass
   pg
   pry
   puma (~> 3.0)
