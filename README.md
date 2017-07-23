@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple Instagram like app, You can:
 
-Things you may want to cover:
+* As a visitor, you can register an account and sign in
 
-* Ruby version
+* As a signed in user, You can sign out
 
-* System dependencies
+* As a signed in user, You can upload an image
 
-* Configuration
-
-* Database creation
+* As both a signed in user and visitor, You can view uploaded images
 
 * Database initialization
 
-* How to run the test suite
+* As a signed in user, You can delete an image that I uploaded
 
-* Services (job queues, cache servers, search engines, etc.)
+* As a signed in user, You can comment on an image
 
-* Deployment instructions
+## Additional
 
-* ...
+* As a visitor or user, You can view profile of different users.
+* Password is encrypted using Bcrypt.
+
+## Example can be found here
+
+https://pictour-sach.herokuapp.com/
+
+# Things used here are:
+
+* Programming Language: Ruby V 2.3.1
+* Web Framework: Ruby On Rails V 5.0.4
+* Server: Puma 3.0
+* JQuery: 4.3.1 (used for Ajax)
+* Bootstrap: 3.3.7
+* Carrier wave gem: 0.10.0 (used to upload images).
