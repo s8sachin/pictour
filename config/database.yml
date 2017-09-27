@@ -8,3 +8,14 @@ development:
   password: password
   host: localhost
   port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  port: 5432
+  reconnect: false
+  username: postgres
+  password: password
+  database: pictour        
+  pool: 5
+  host: localhost
