@@ -17,7 +17,7 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 set :stage, :production
-set :branch, :master
+set :branch, :deploy
 set :deploy_to, '/home/deploy/u01/apps/qwinix/production-sunil'
 set :user, "deploy"
 role :app, %w{deploy@52.207.90.139}
