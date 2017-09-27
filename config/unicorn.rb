@@ -9,6 +9,7 @@ working_directory "/home/deploy/u01/apps/qwinix/production-sunil/current"
 worker_processes 2
 preload_app true
 timeout 30
+rails_env = 'production'
 
 # Set up socket location
 listen "/home/deploy/u01/apps/qwinix/production-sunil/shared/sockets/unicorn.sock", :backlog => 64
