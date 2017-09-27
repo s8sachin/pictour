@@ -2,11 +2,11 @@
 # set path to application
 app_dir = File.expand_path("/home/deploy/u01/apps/qwinix/production-sunil/current", __FILE__)
 #shared_dir = "#{app_dir}/shared"
-working_directory app_dir
+working_directory "/home/deploy/u01/apps/qwinix/production-sunil/current"
 
 
 # Set unicorn options
-worker_processes 2
+worker_processes 4
 preload_app true
 timeout 30
 
