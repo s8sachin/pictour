@@ -6,7 +6,7 @@ working_directory "/home/deploy/u01/apps/qwinix/production-sunil/current"
 
 
 # Set unicorn options
-worker_processes 4
+worker_processes 2
 preload_app true
 timeout 30
 
