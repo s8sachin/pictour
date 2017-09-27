@@ -2,7 +2,7 @@
 lock "3.9.1"
 
 set :application, "pictour"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "https://github.com/s8sachin/pictour.git"
 set :rbenv_ruby, '2.3.1'
 
 # Default branch is :master
