@@ -10,6 +10,10 @@ end
 gem 'rails', '~> 5.0.4'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
+gem 'capistrano', '~> 3.5'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
+gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
 gem 'pg'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'pry'
